@@ -1,5 +1,5 @@
 # LLM-Enhanced-Iterative-Framework
-An LLM-enhanced Iterative Framework for Modular Code Generation in Complex Tasks
+We introduce an iterative modular code generation framework that systematically decomposes tasks into smaller subtasks, generates code chunks based on these subtasks, and iteratively improves these code chunks. The final product is then evaluated and integrated into a cohesive whole. Our framework leverages Retrieval-Augmented Generation (RAG) for code generation, improves code quality through iterative improvements, and combines LLM with control flow graph (CFG) analysis for evaluation.
 
 ## Project Overview
 
@@ -26,7 +26,11 @@ This project evaluates the framework for solving encoding problems for large lan
 - **Temperature:** Set to 1.0
 - **Maximum output length:** is 4000 tokens
 
-## Settings and Installation
+## Description
 
-1. Download all-MiniLM-L6-v2 and place it in the corresponding location（or all-MiniLM-L6-v2 of Hugging Face ）
-2. Use generate_framework.ipynb and follow the prompts to install the corresponding package
+- **generate_framework_Core** contains the main function definition functions of the three parts of the framework: Planning, Iterative Improvement, and Quality Evaluation, but does not include import and main calling functions
+(The complete code for this project will be provided upon acceptance of the associated research paper.)
+- **generate_direct** directly uses LLMs to generate code
+- **all-MiniLM-L6-v2** local version of the embedding model (or all-MiniLM-L6-v2 of Hugging Face)
+- **README** provides an overview of installation, usage instructions, and project structure.
+- **dataset_vectorization**Import APPS dataset and build vector database
